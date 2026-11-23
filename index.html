@@ -633,6 +633,40 @@
       return `${hariList[sekarang.getDay()]}, ${sekarang.getDate()} ${bulanList[sekarang.getMonth()]} ${sekarang.getFullYear()}`;
     }
 
+    function getStorageKey() {
+      if (!pesertaAktif) return null;
+      return `SESI_UJIAN_SMPN1MODAYAG_${normalisasiKelas(pesertaAktif.kelas)}_${String(pesertaAktif.password).trim()}`;
+    }
+
+    function simpanProgresLokal() {
+      const key = getStorageKey();
+      if (!key || !ujianAktif || sudahSubmit) return;
+
+      const state = {
+        pesertaAktif,
+        soalTampil,
+        jawabanSiswa,
+        jumlahPelanggaran,
+        sisaDetik,
+        tanggalUjian: document.getElementById("tampilHariTanggal").textContent
+      };
+      try {
+        localStorage.setItem(key, JSON.stringify(state));
+      } catch (e) {
+        console.error("Gagal menyimpan progres lokal:", e);
+      }
+    }
+
+    function hapusProgresLokal() {
+      const key = getStorageKey();
+      if (!key) return;
+      try {
+        localStorage.removeItem(key);
+      } catch (e) {
+        console.error("Gagal menghapus progres lokal:", e);
+      }
+    }
+
     function acakArray(arr) {
       const salinan = [...arr];
       for (let i = salinan.length - 1; i > 0; i--) {
@@ -717,6 +751,7 @@
           radio.value = opt.kodeAsli;
           radio.addEventListener("change", () => {
             jawabanSiswa[idx] = opt.kodeAsli;
+            simpanProgresLokal();
           });
 
           const spanText = document.createElement("span");
@@ -741,6 +776,7 @@
       intervalTimer = setInterval(() => {
         sisaDetik--;
         updateTampilanTimer(elTimer);
+        if (sisaDetik % 5 === 0) simpanProgresLokal();
 
         if (sisaDetik <= 0) {
           clearInterval(intervalTimer);
@@ -761,6 +797,7 @@
       jumlahPelanggaran++;
       document.getElementById("tampilPelanggaran").textContent =
         `Pelanggaran: ${jumlahPelanggaran} / ${BATAS_PELANGGARAN}`;
+      simpanProgresLokal();
 
       sedangDialog = true;
       if (jumlahPelanggaran >= BATAS_PELANGGARAN) {
@@ -832,23 +869,57 @@
 
         pesertaAktif = cocok;
 
-        // Acak urutan soal dan urutan opsi per soal
-        soalTampil = acakArray(sumberSoal).map((s) => {
-          const daftarOpsi = Object.entries(s.opsi).map(([kodeAsli, teks]) => ({
-            kodeAsli,
-            teks
-          }));
-          return {
-            ...s,
-            opsiAcak: acakArray(daftarOpsi)
-          };
-        });
+        const keySesi = getStorageKey();
+        const tersimpanRaw = keySesi ? localStorage.getItem(keySesi) : null;
+        let dipulihkan = false;
 
-        document.getElementById("tampilHariTanggal").textContent = formatHariTanggalSekarang();
+        if (tersimpanRaw) {
+          try {
+            const tersimpan = JSON.parse(tersimpanRaw);
+            if (tersimpan && Array.isArray(tersimpan.soalTampil) && tersimpan.soalTampil.length > 0 && tersimpan.sisaDetik > 0) {
+              soalTampil = tersimpan.soalTampil;
+              jawabanSiswa = tersimpan.jawabanSiswa || {};
+              jumlahPelanggaran = tersimpan.jumlahPelanggaran || 0;
+              sisaDetik = tersimpan.sisaDetik;
+              document.getElementById("tampilHariTanggal").textContent = tersimpan.tanggalUjian || formatHariTanggalSekarang();
+              dipulihkan = true;
+            }
+          } catch (e) {
+            dipulihkan = false;
+          }
+        }
+
+        if (!dipulihkan) {
+          // Acak urutan soal dan urutan opsi per soal
+          soalTampil = acakArray(sumberSoal).map((s) => {
+            const daftarOpsi = Object.entries(s.opsi).map(([kodeAsli, teks]) => ({
+              kodeAsli,
+              teks
+            }));
+            return {
+              ...s,
+              opsiAcak: acakArray(daftarOpsi)
+            };
+          });
+          document.getElementById("tampilHariTanggal").textContent = formatHariTanggalSekarang();
+          sisaDetik = DURASI_MENIT * 60;
+          jawabanSiswa = {};
+          jumlahPelanggaran = 0;
+        }
+
         document.getElementById("tampilNamaSiswa").textContent = cocok.namaSiswa;
         document.getElementById("tampilKelasSiswa").textContent = cocok.kelas;
+        document.getElementById("tampilPelanggaran").textContent = `Pelanggaran: ${jumlahPelanggaran} / ${BATAS_PELANGGARAN}`;
 
         renderSoalKeHalaman();
+
+        // Centang kembali radio jawaban yang sudah tersimpan
+        Object.entries(jawabanSiswa).forEach(([idxSoal, kodeDipilih]) => {
+          const elRadio = document.querySelector(`input[name="soal_${idxSoal}"][value="${kodeDipilih}"]`);
+          if (elRadio) elRadio.checked = true;
+        });
+
+        simpanProgresLokal();
 
         document.getElementById("halamanLogin").classList.add("hidden");
         document.getElementById("topbarUjian").classList.remove("hidden");
@@ -885,6 +956,7 @@
       sudahSubmit = true;
       ujianAktif = false;
       clearInterval(intervalTimer);
+      hapusProgresLokal();
 
       const btnSubmit = document.getElementById("btnKumpulkan");
       btnSubmit.disabled = true;
