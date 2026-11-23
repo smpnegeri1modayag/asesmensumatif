@@ -481,18 +481,28 @@
 
     <form id="formLogin">
       <div class="form-group">
-        <label for="inputNama">Nama Lengkap</label>
-        <input type="text" id="inputNama" placeholder="Masukkan nama sesuai daftar" required autocomplete="off" />
-      </div>
-
-      <div class="form-group">
-        <label for="inputPassword">Password / Nomor Induk</label>
-        <input type="password" id="inputPassword" placeholder="Masukkan password atau nomor induk" required autocomplete="off" />
-      </div>
-
-      <div class="form-group">
         <label for="inputKelas">Kelas</label>
-        <input type="text" id="inputKelas" placeholder="Contoh: VII-A, VIII-B, atau IX-A" required autocomplete="off" />
+        <select id="inputKelas" required>
+          <option value="">-- Pilih Kelas --</option>
+          <optgroup label="Kelas 7">
+            <option value="7A">7A</option>
+            <option value="7B">7B</option>
+            <option value="7C">7C</option>
+            <option value="7D">7D</option>
+          </optgroup>
+          <optgroup label="Kelas 8">
+            <option value="8A">8A</option>
+            <option value="8B">8B</option>
+            <option value="8C">8C</option>
+            <option value="8D">8D</option>
+          </optgroup>
+          <optgroup label="Kelas 9">
+            <option value="9A">9A</option>
+            <option value="9B">9B</option>
+            <option value="9C">9C</option>
+            <option value="9D">9D</option>
+          </optgroup>
+        </select>
       </div>
 
       <button type="submit" id="btnLogin" class="btn-primary">Masuk ke Lembar Soal</button>
@@ -622,14 +632,24 @@
       return salinan;
     }
 
-    function tentukanJenjang(kelasInput, jenjangSheet) {
-      const j = (jenjangSheet || "").trim().toUpperCase();
-      if (["VII", "VIII", "IX"].includes(j)) return j;
+    function normalisasiKelas(teks) {
+      return String(teks || "")
+        .trim()
+        .toUpperCase()
+        .replace(/[-\s]/g, ""); // hilangkan spasi dan tanda '-' agar "7-A" dan "7A" sama
+    }
 
-      const k = (kelasInput || "").trim().toUpperCase();
-      if (k.startsWith("IX") || k.startsWith("9")) return "IX";
-      if (k.startsWith("VIII") || k.startsWith("8")) return "VIII";
-      if (k.startsWith("VII") || k.startsWith("7")) return "VII";
+    function tentukanJenjang(kelasInput, jenjangSheet) {
+      const j = String(jenjangSheet || "").trim().toUpperCase();
+      if (["VII", "VIII", "IX"].includes(j)) return j;
+      if (j === "7") return "VII";
+      if (j === "8") return "VIII";
+      if (j === "9") return "IX";
+
+      const k = normalisasiKelas(kelasInput);
+      if (k.startsWith("9") || k.startsWith("IX")) return "IX";
+      if (k.startsWith("8") || k.startsWith("VIII")) return "VIII";
+      if (k.startsWith("7") || k.startsWith("VII")) return "VII";
       return "";
     }
 
@@ -784,9 +804,9 @@
       try {
         const daftar = await ambilDaftarPeserta();
         const cocok = daftar.find((p) =>
-          p.namaSiswa.toLowerCase() === namaInput.toLowerCase() &&
-          String(p.password) === passInput &&
-          p.kelas.toLowerCase() === kelasInput.toLowerCase()
+          p.namaSiswa.toLowerCase().trim() === namaInput.toLowerCase() &&
+          String(p.password).trim() === passInput &&
+          normalisasiKelas(p.kelas) === normalisasiKelas(kelasInput)
         );
 
         if (!cocok) {
