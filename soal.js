@@ -68,6 +68,50 @@ const bankSoal = {
       },
       kunci: "C"
     },
+    {
+      no: 7,
+      pertanyaan: "Bentuk pengurangan bilangan bulat \\( 9 - (-6) \\) jika diubah menjadi operasi penjumlahan yang ekuivalen adalah...",
+      opsi: {
+        A: "\\( 9 + (-6) \\)",
+        B: "\\( 9 + 6 \\)",
+        C: "\\( -9 + 6 \\)",
+        D: "\\( -9 + (-6) \\)"
+      },
+      kunci: "B"
+    },
+    {
+      no: 8,
+      pertanyaan: "Pada pagi hari di wilayah perkebunan, suhu udara tercatat \\( -3^\\circ\\text{C} \\). Pada siang hari, suhu meningkat sehingga selisih antara suhu siang hari dan suhu pagi hari adalah \\( 11^\\circ\\text{C} \\). Jika suhu siang hari dimisalkan \\( T \\), kalimat matematika yang tepat untuk menunjukkan selisih suhu tersebut adalah...",
+      opsi: {
+        A: "\\( T - (-3) = 11 \\)",
+        B: "\\( -3 - T = 11 \\)",
+        C: "\\( T - 3 = 11 \\)",
+        D: "\\( 3 - (-T) = 11 \\)"
+      },
+      kunci: "A"
+    },
+    {
+      no: 9,
+      pertanyaan: "Hasil dari operasi hitung campuran bilangan bulat \\( -14 + 9 - (-7) \\) adalah...",
+      opsi: {
+        A: "\\( -12 \\)",
+        B: "\\( -2 \\)",
+        C: "\\( 2 \\)",
+        D: "\\( 12 \\)"
+      },
+      kunci: "C"
+    },
+    {
+      no: 10,
+      pertanyaan: "Saldo tabungan koperasi siswa milik Dika mula-mula sebesar \\( -\\text{Rp}25.000 \\) (tercatat kurang bayar). Pada minggu pertama ia menyetor \\( \\text{Rp}60.000 \\), lalu pada minggu kedua ia mengambil dana sebesar \\( \\text{Rp}42.000 \\) untuk membeli perlengkapan sekolah. Berapakah posisi saldo tabungan Dika sekarang?",
+      opsi: {
+        A: "\\( -\\text{Rp}7.000 \\)",
+        B: "\\( \\text{Rp}7.000 \\)",
+        C: "\\( \\text{Rp}13.000 \\)",
+        D: "\\( -\\text{Rp}13.000 \\)"
+      },
+      kunci: "A"
+    },
   ],
 
   "VIII": [
