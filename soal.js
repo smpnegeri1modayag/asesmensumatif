@@ -46,6 +46,28 @@ const bankSoal = {
       },
       kunci: "A"
     },
+    {
+      no: 5,
+      pertanyaan: "Perhatikan empat operasi penjumlahan bilangan bulat berikut:<br>(I) \\( -18 + 7 = -11 \\)<br>(II) \\( 14 + (-23) = 9 \\)<br>(III) \\( -9 + (-16) = -25 \\)<br>(IV) \\( -27 + 27 = 0 \\)<br>Operasi penjumlahan yang hasilnya **tidak tepat** ditunjukkan oleh nomor...",
+      opsi: {
+        A: "(I)",
+        B: "(II)",
+        C: "(III)",
+        D: "(IV)"
+      },
+      kunci: "B"
+    },
+    {
+      no: 6,
+      pertanyaan: "Dalam sebuah permainan papan di kelas, skor awal kelompok Rina adalah \\( -15 \\) poin karena terkena kartu penalti. Pada giliran berikutnya, kelompok Rina berhasil menjawab pertanyaan tantangan dan memperoleh tambahan \\( 28 \\) poin. Berapakah total skor kelompok Rina sekarang?",
+      opsi: {
+        A: "\\( -43 \\)",
+        B: "\\( -13 \\)",
+        C: "\\( 13 \\)",
+        D: "\\( 43 \\)"
+      },
+      kunci: "C"
+    },
   ],
 
   "VIII": [
