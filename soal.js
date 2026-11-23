@@ -4,37 +4,48 @@ const bankSoal = {
   "VII": [
     {
       no: 1,
-      pertanyaan: "Hasil dari operasi bilangan bulat \\( (-12) + 7 \\times (-3) \\) adalah...",
+      pertanyaan: "Perhatikan ilustrasi termometer digital berikut yang menunjukkan perubahan suhu ruangan pendingin di sebuah laboratorium:<br><div style='margin:8px 0;padding:10px;border:1px solid #cbd5e1;border-radius:6px;background:#f8fafc;font-family:monospace;font-size:13px;'>Suhu Awal: <strong>+6°C</strong> &nbsp;---(turun 10°C)---&gt; &nbsp;Suhu Akhir: <strong>? °C</strong><br>|---|---|---|---|---|---|---|---|---|---|---|---|---|---|<br>-8 &nbsp;-6 &nbsp;-4 &nbsp;-2 &nbsp;0 &nbsp;+2 &nbsp;+4 &nbsp;+6 &nbsp;+8</div>Suhu akhir ruangan pendingin tersebut jika dinyatakan dengan bilangan bertanda negatif adalah \\( \\ldots\\ ^\\circ\\text{C} \\).",
       opsi: {
-        A: "\\( -33 \\)",
-        B: "\\( -15 \\)",
-        C: "\\( 9 \\)",
-        D: "\\( 15 \\)"
+        A: "\\( -4^\\circ\\text{C} \\)",
+        B: "\\( -16^\\circ\\text{C} \\)",
+        C: "\\( 4^\\circ\\text{C} \\)",
+        D: "\\( 16^\\circ\\text{C} \\)"
       },
       kunci: "A"
     },
     {
       no: 2,
-      pertanyaan: "Bentuk sederhana dari \\( \\frac{3}{4} + \\frac{5}{6} \\) adalah...",
+      pertanyaan: "Pada sebuah ekspedisi kelautan di perairan Sulawesi Utara, kapal riset menurunkan sensor kedalaman hingga \\( 120\\text{ meter} \\) di bawah permukaan laut. Pada hari yang sama, sebuah drone cuaca terbang pada ketinggian \\( 85\\text{ meter} \\) di atas permukaan laut. Jika permukaan laut ditetapkan sebagai titik acuan \\( 0\\text{ meter} \\), pernyataan yang paling tepat mengenai penggunaan tanda negatif pada situasi tersebut adalah...",
       opsi: {
-        A: "\\( \\frac{8}{10} \\)",
-        B: "\\( 1 \\frac{7}{12} \\)",
-        C: "\\( \\frac{19}{12} \\)",
-        D: "\\( 1 \\frac{5}{12} \\)"
+        A: "Posisi sensor dinyatakan dengan \\( -120\\text{ m} \\) karena berada di bawah titik acuan \\( 0\\text{ m} \\), sedangkan drone dinyatakan dengan \\( +85\\text{ m} \\).",
+        B: "Posisi drone dinyatakan dengan \\( -85\\text{ m} \\) karena berada di atas permukaan laut, sedangkan sensor dinyatakan dengan \\( +120\\text{ m} \\).",
+        C: "Kedua posisi dinyatakan dengan tanda negatif karena keduanya tidak berada tepat di garis pantai.",
+        D: "Posisi sensor dinyatakan dengan \\( -120\\text{ m} \\) dan drone dinyatakan dengan \\( -85\\text{ m} \\) karena keduanya bergerak menjauh."
+      },
+      kunci: "A"
+    },
+    {
+      no: 3,
+      pertanyaan: "Pada garis bilangan horizontal, semakin ke kiri letak suatu bilangan bulat negatif maka nilainya semakin kecil. Perbandingan yang tepat antara dua bilangan bulat negatif berikut adalah...",
+      opsi: {
+        A: "\\( -15 > -9 \\)",
+        B: "\\( -24 < -18 \\)",
+        C: "\\( -7 < -12 \\)",
+        D: "\\( -5 > 0 \\)"
       },
       kunci: "B"
     },
     {
-      no: 3,
-      pertanyaan: "Jika \\( x = 4 \\), maka nilai dari bentuk aljabar \\( 3x^2 - 2x + 5 \\) adalah...",
+      no: 4,
+      pertanyaan: "Di daerah pegunungan Modayag saat musim kemarau, suhu udara pada dini hari di empat pos pemantauan tercatat sebagai berikut: Pos A sebesar \\( -4^\\circ\\text{C} \\), Pos B sebesar \\( -9^\\circ\\text{C} \\), Pos C sebesar \\( -2^\\circ\\text{C} \\), dan Pos D sebesar \\( -7^\\circ\\text{C} \\). Jika keempat suhu tersebut diurutkan pada garis bilangan dari posisi paling kiri (paling dingin) ke posisi paling kanan (paling hangat), urutan yang benar adalah...",
       opsi: {
-        A: "\\( 45 \\)",
-        B: "\\( 49 \\)",
-        C: "\\( 53 \\)",
-        D: "\\( 37 \\)"
+        A: "\\( -9^\\circ\\text{C}, -7^\\circ\\text{C}, -4^\\circ\\text{C}, -2^\\circ\\text{C} \\)",
+        B: "\\( -2^\\circ\\text{C}, -4^\\circ\\text{C}, -7^\\circ\\text{C}, -9^\\circ\\text{C} \\)",
+        C: "\\( -9^\\circ\\text{C}, -4^\\circ\\text{C}, -7^\\circ\\text{C}, -2^\\circ\\text{C} \\)",
+        D: "\\( -4^\\circ\\text{C}, -2^\\circ\\text{C}, -7^\\circ\\text{C}, -9^\\text{C} \\)"
       },
       kunci: "A"
-    }
+    },
   ],
 
   "VIII": [
