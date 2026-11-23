@@ -112,6 +112,28 @@ const bankSoal = {
       },
       kunci: "A"
     },
+    {
+      no: 11,
+      pertanyaan: "Perhatikan operasi perkalian bilangan bulat pada gambar papan tulis berikut:<br><img src='https://lh3.googleusercontent.com/d/1rAiJDCHk7pH2M5YyQuVYb0th9Iu7L5nn' alt='Operasi Perkalian Bilangan Bulat' style='max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;margin:8px 0;'><br>Hasil perhitungan yang tepat untuk menggantikan tanda tanya \\( (?) \\) pada gambar tersebut adalah...",
+      opsi: {
+        A: "\\( -78 \\)",
+        B: "\\( -18 \\)",
+        C: "\\( 18 \\)",
+        D: "\\( 78 \\)"
+      },
+      kunci: "B"
+    },
+    {
+      no: 12,
+      pertanyaan: "Dalam kompetisi cerdas cermat matematika, panitia menetapkan aturan penilaian sebagai berikut: setiap jawaban benar mendapat skor \\( 4 \\), jawaban salah mendapat skor \\( -2 \\), dan soal yang tidak dijawab mendapat skor \\( 0 \\). Dari \\( 30 \\) soal yang diberikan, Raka menjawab \\( 21 \\) soal dengan benar, \\( 6 \\) soal salah, dan sisanya tidak dijawab. Total skor yang diperoleh Raka adalah...",
+      opsi: {
+        A: "\\( 72 \\)",
+        B: "\\( 84 \\)",
+        C: "\\( 96 \\)",
+        D: "\\( 66 \\)"
+      },
+      kunci: "A"
+    },
   ],
 
   "VIII": [
