@@ -512,8 +512,7 @@ const bankSoal = {
     },
     {
       no: 7,
-      gambar: "https://lh3.googleusercontent.com/d/1ezk97EXWg1OfBmp_3AsKMc70r34fB9jl",
-      pertanyaan: "Perhatikan gambar ilustrasi pembelian apel (seharga \\( \\text{Rp}a \\) per buah) dan donat (seharga \\( \\text{Rp}b \\) per buah) di atas. Pada bagian **Rencana Awal** dan **Perubahan Belanja**, manakah pasangan suku berikut yang merupakan **suku-suku sejenis**?",
+      pertanyaan: "Perhatikan gambar ilustrasi pembelian apel (seharga \\( \\text{Rp}a \\) per buah) dan donat (seharga \\( \\text{Rp}b \\) per buah) berikut:<br><img src='https://lh3.googleusercontent.com/d/1ezk97EXWg1OfBmp_3AsKMc70r34fB9jl' alt='Ilustrasi Pembelian Apel dan Donat' style='max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;margin:8px 0;'><br> Pada bagian **Rencana Awal** dan **Perubahan Belanja**, manakah pasangan suku berikut yang merupakan **suku-suku sejenis**?",
       opsi: {
         A: "\\( 5a \\) dan \\( -2a \\)",
         B: "\\( 5a \\) dan \\( 4b \\)",
@@ -524,8 +523,7 @@ const bankSoal = {
     },
     {
       no: 8,
-      gambar: "https://lh3.googleusercontent.com/d/1ezk97EXWg1OfBmp_3AsKMc70r34fB9jl",
-      pertanyaan: "Perhatikan informasi pada gambar di atas. Pada **Rencana Awal**, tercatat pembelian \\( 5 \\) apel seharga \\( \\text{Rp}a \\) per buah dan \\( 4 \\) donat seharga \\( \\text{Rp}b \\) per buah yang dinyatakan sebagai \\( 5a + 4b \\). Karena uang tidak cukup, dilakukan **Perubahan Belanja** dengan mengurangi \\( 2 \\) apel dan menambah \\( 2 \\) donat \\( (-2a + 2b) \\). Langkah pengelompokan suku-suku sejenis yang tepat untuk menyusun bentuk aljabar **Total** belanja akhir adalah...",
+      pertanyaan: "Perhatikan informasi pada gambar ilustrasi pembelian apel dan donat berikut:<br><img src='https://lh3.googleusercontent.com/d/1ezk97EXWg1OfBmp_3AsKMc70r34fB9jl' alt='Ilustrasi Pembelian Apel dan Donat' style='max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;margin:8px 0;'><br> Pada **Rencana Awal**, tercatat pembelian \\( 5 \\) apel seharga \\( \\text{Rp}a \\) per buah dan \\( 4 \\) donat seharga \\( \\text{Rp}b \\) per buah yang dinyatakan sebagai \\( 5a + 4b \\). Karena uang tidak cukup, dilakukan **Perubahan Belanja** dengan mengurangi \\( 2 \\) apel dan menambah \\( 2 \\) donat \\( (-2a + 2b) \\). Langkah pengelompokan suku-suku sejenis yang tepat untuk menyusun bentuk aljabar **Total** belanja akhir adalah...",
       opsi: {
         A: "\\( (5a - 2a) + (4b + 2b) = 3a + 6b \\)",
         B: "\\( (5a + 4b) + (-2a + 2b) = 9ab \\)",
@@ -536,8 +534,7 @@ const bankSoal = {
     },
     {
       no: 9,
-      gambar: "https://lh3.googleusercontent.com/d/1ezk97EXWg1OfBmp_3AsKMc70r34fB9jl",
-      pertanyaan: "Berdasarkan gambar rencana belanja di atas, diketahui hasil perubahan belanja akhir adalah \\( 3 \\) apel dan \\( 6 \\) donat dengan bentuk aljabar \\( 3a + 6b \\). Keesokan harinya, pembeli tersebut kembali membeli tambahan \\( 4 \\) apel dan \\( 1 \\) donat dengan harga satuan yang sama, lalu memberikan \\( 2 \\) donat kepada adiknya. Bentuk aljabar paling sederhana yang menyatakan total nilai belanja keseluruhan dari hari pertama hingga hari kedua adalah...",
+      pertanyaan: "Perhatikan gambar rencana belanja apel dan donat berikut:<br><img src='https://lh3.googleusercontent.com/d/1ezk97EXWg1OfBmp_3AsKMc70r34fB9jl' alt='Rencana Belanja Apel dan Donat' style='max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;margin:8px 0;'><br>Berdasarkan gambar rencana belanja tersebut, diketahui hasil perubahan belanja akhir adalah \\( 3 \\) apel dan \\( 6 \\) donat dengan bentuk aljabar \\( 3a + 6b \\). Keesokan harinya, pembeli tersebut kembali membeli tambahan \\( 4 \\) apel dan \\( 1 \\) donat dengan harga satuan yang sama, lalu memberikan \\( 2 \\) donat kepada adiknya. Bentuk aljabar paling sederhana yang menyatakan total nilai belanja keseluruhan dari hari pertama hingga hari kedua adalah...",
       opsi: {
         A: "\\( 7a + 5b \\)",
         B: "\\( 7a + 7b \\)",
@@ -614,8 +611,7 @@ const bankSoal = {
     },
     {
       no: 16,
-      gambar: "https://lh3.googleusercontent.com/d/1pjAzophzkhdw29AtESnHzPJlaXAEnUyw",
-      pertanyaan: "Perhatikan sketsa denah lahan berbentuk persegi panjang pada gambar di atas. Lahan tersebut memiliki lebar \\( y\\text{ m} \\) dan terbagi menjadi dua bagian yang bersebelahan, yaitu **Kebun Sayur** dengan panjang \\( x\\text{ m} \\) dan **Kolam Ikan** dengan panjang \\( 4\\text{ m} \\), sehingga panjang total lahan adalah \\( (x + 4)\\text{ m} \\). Berdasarkan hubungan perkalian luas persegi panjang (lebar dikali panjang total), bentuk aljabar paling sederhana yang menyatakan **total luas seluruh lahan** tersebut (dalam \\( \\text{m}^2 \\)) adalah...",
+      pertanyaan: "Perhatikan sketsa denah lahan berbentuk persegi panjang pada gambar berikut:<br><img src='https://lh3.googleusercontent.com/d/1pjAzophzkhdw29AtESnHzPJlaXAEnUyw' alt='Sketsa Denah Kebun Sayur dan Kolam Ikan' style='max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;margin:8px 0;'><br> Lahan tersebut memiliki lebar \\( y\\text{ m} \\) dan terbagi menjadi dua bagian yang bersebelahan, yaitu **Kebun Sayur** dengan panjang \\( x\\text{ m} \\) dan **Kolam Ikan** dengan panjang \\( 4\\text{ m} \\), sehingga panjang total lahan adalah \\( (x + 4)\\text{ m} \\). Berdasarkan hubungan perkalian luas persegi panjang (lebar dikali panjang total), bentuk aljabar paling sederhana yang menyatakan **total luas seluruh lahan** tersebut (dalam \\( \\text{m}^2 \\)) adalah...",
       opsi: {
         A: "\\( xy + 4y \\)",
         B: "\\( xy + 4 \\)",
@@ -769,8 +765,7 @@ const bankSoal = {
     },
     {
       no: 30,
-      gambar: "https://lh3.googleusercontent.com/d/1fRFBTnOc8wI9XM8tF-i6rztEDvq34B2_",
-      pertanyaan: "Perhatikan daftar harga paket menu pada gambar di atas. Terdapat dua pilihan paket hemat dengan harga satuan masing-masing item tetap sama, yaitu **COMBO 1** yang berisi \\( 3 \\) hamburger dan \\( 1 \\) minuman dengan total harga \\( \\text{¥}750 \\), serta **COMBO 2** yang berisi \\( 1 \\) hamburger dan \\( 1 \\) minuman dengan total harga \\( \\text{¥}350 \\). Dengan menggunakan **metode eliminasi** untuk menentukan harga satuan masing-masing menu, berapa total harga yang harus dibayar jika seorang pembeli memesan **\\( 2 \\) hamburger dan \\( 3 \\) minuman**?",
+      pertanyaan: "Perhatikan daftar harga paket menu pada gambar berikut:<br><img src='https://lh3.googleusercontent.com/d/1fRFBTnOc8wI9XM8tF-i6rztEDvq34B2_' alt='Daftar Harga Paket Menu Combo' style='max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;margin:8px 0;'><br> Terdapat dua pilihan paket hemat dengan harga satuan masing-masing item tetap sama, yaitu **COMBO 1** yang berisi \\( 3 \\) hamburger dan \\( 1 \\) minuman dengan total harga \\( \\text{¥}750 \\), serta **COMBO 2** yang berisi \\( 1 \\) hamburger dan \\( 1 \\) minuman dengan total harga \\( \\text{¥}350 \\). Dengan menggunakan **metode eliminasi** untuk menentukan harga satuan masing-masing menu, berapa total harga yang harus dibayar jika seorang pembeli memesan **\\( 2 \\) hamburger dan \\( 3 \\) minuman**?",
       opsi: {
         A: "\\( \\text{¥}850 \\)",
         B: "\\( \\text{¥}700 \\)",
@@ -858,8 +853,7 @@ const bankSoal = {
     },
     {
       no: 38,
-      gambar: "https://lh3.googleusercontent.com/d/1rOeEni3oDi3UthWgtpSEc1v3hkJZOMBN",
-      pertanyaan: "Perhatikan informasi daftar harga satuan dan catatan pembelian Heru pada gambar di atas. Heru membeli **Kue (Cake)** seharga \\( \\text{¥}200 \\) per buah dan **Puding Karamel** seharga \\( \\text{¥}120 \\) per buah dengan total keseluruhan sebanyak **\\( 12 \\) buah makanan** dan total harga yang dibayarkan sebesar **\\( \\text{¥}2.000 \\)**. Berdasarkan model sistem persamaan linear dua variabel dari permasalahan tersebut, manakah kesimpulan analisis yang paling tepat mengenai rincian pembelian Heru?",
+      pertanyaan: "Perhatikan informasi daftar harga satuan dan catatan pembelian Heru pada gambar berikut:<br><img src='https://lh3.googleusercontent.com/d/1rOeEni3oDi3UthWgtpSEc1v3hkJZOMBN' alt='Daftar Harga dan Pembelian Kue dan Puding Karamel' style='max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;margin:8px 0;'><br> Heru membeli **Kue (Cake)** seharga \\( \\text{¥}200 \\) per buah dan **Puding Karamel** seharga \\( \\text{¥}120 \\) per buah dengan total keseluruhan sebanyak **\\( 12 \\) buah makanan** dan total harga yang dibayarkan sebesar **\\( \\text{¥}2.000 \\)**. Berdasarkan model sistem persamaan linear dua variabel dari permasalahan tersebut, manakah kesimpulan analisis yang paling tepat mengenai rincian pembelian Heru?",
       opsi: {
         A: "Heru membeli \\( 7 \\) buah Kue dan \\( 5 \\) buah Puding Karamel, sehingga jumlah Kue yang dibeli \\( 2 \\) buah lebih banyak daripada Puding Karamel.",
         B: "Heru membeli \\( 5 \\) buah Kue dan \\( 7 \\) buah Puding Karamel, sehingga total harga Puding Karamel lebih besar daripada total harga Kue.",
